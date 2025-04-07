@@ -1,0 +1,28 @@
+# Node modules
+node_modules/
+
+# Build output
+dist/
+build/
+
+# Logs
+npm-debug.log*
+
+# Local env files
+.env
+.env.*.local
+
+# Editor directories and files
+.vscode/
+
+# Optional npm cache directory
+.npm/
+
+# Optional eslint cache
+.eslintcache
+
+# Parcel cache
+.cache/
+
+# Output of `npm pack`
+*.tgz
