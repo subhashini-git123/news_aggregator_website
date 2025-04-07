@@ -115,5 +115,3 @@ _Add screenshots or demo video here._
 [🔗 View Deployed App](https://your-demo-link.com)
 
 ---
-
-Let me know if you want me to include badges, CI/CD instructions, or a sample folder structure too!
