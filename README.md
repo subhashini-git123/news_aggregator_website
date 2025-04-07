@@ -107,7 +107,7 @@ npm run dev
 ---
 
 ## 📸 Screenshots (Optional)
-_Add screenshots or demo GIFs here._
+_Add screenshots or demo video here._
 
 ---
 
