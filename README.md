@@ -1,8 +1,3 @@
-# news_aggregator_website
-News Aggregator Website
-
-Here’s your project description converted into a polished `README.md` format:
-
 ---
 
 # 📰 News Aggregator Website
