@@ -2,25 +2,21 @@ import React, { useState } from "react";
 import Card from "./Card";
 
 const News = () => {
-
-const [search, setSearch] = useState("india")
-const [newsData, setnewsData] = useState([])
+  const [search, setSearch] = useState("india");
+  const [newsData, setNewsData] = useState([]);
 
   const apiKey = "5ebf4f5a41c74d55be288dcc48792aab";
-const getData = async() =>{    
-      const response = await fetch(`https://newsapi.org/v2/everything?q=india&apiKey=${apiKey}`)
-       const jsonData = await response.json();
-       console.log(jsonData, 'test');
-       
-       setnewsData(jsonData)    
-      //  console.log(jsonData.articles) 
-      //  console.log(typeof jsonData.articles) 
-      
-       
-};
-const handleInput = (e) =>{
-  setSearch(e.target.value);
-}
+  const getData = async () => {
+    const response = await fetch(
+      `https://newsapi.org/v2/everything?q=${search}&apiKey=${apiKey}`
+    );
+    const jsonData = await response.json();
+
+    setNewsData(jsonData.articles);
+  };
+  const handleInput = (e) => {
+    setSearch(e.target.value);
+  };
   return (
     <div>
       <nav>
@@ -28,13 +24,17 @@ const handleInput = (e) =>{
           <h1 className="main_heading">News Buzz</h1>
         </div>
         <div className="searchBar">
-          <input type="text" placeholder="Search Here... " onChange={handleInput}></input>
+          <input
+            type="text"
+            placeholder="Search Here... "
+            onChange={handleInput}
+          ></input>
           <button onClick={getData}>Search</button>
         </div>
       </nav>
       <div>
         {/* <Card data={newsData}/>  */}
-        {/* {newsData.map((ele) => {
+        {newsData.map((ele) => {
           console.log(ele);
           return (
             <>
@@ -54,17 +54,12 @@ const handleInput = (e) =>{
                   <a href={ele.url} target="_blank" className="btn btn-primary">
                     Read more
                   </a>
-                
                 </div>
               </div>
             </>
           );
-        })} */}
-        {
+        })}
         
-            <pre>{JSON.stringify(newsData.articles)}</pre>
-         
-        }
       </div>
     </div>
   );
